@@ -14,6 +14,7 @@
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>Babel.registerPreset('classic-react',{presets:[[Babel.availablePresets['react'],{runtime:'classic'}]]});</script>
 
 <style>
   html, body { margin: 0; padding: 0; }
@@ -188,7 +189,7 @@
 
 <script type="application/json" id="problems-data">[{"id": "e2024_06_04", "difficulty": "easy", "topic": "반도체의 특성과 소재", "source": "2024년 6월 학평 4번", "answer": 3, "choices": ["액정", "그래핀", "반도체", "초전도체", "탄소 나노 튜브"], "explanation": "A는 <b>전기 전도성이 도체와 절연체의 중간<\/b>이고, 규소(Si)·저마늄(Ge)으로 이루어지며 집적회로·LED·태양 전지의 기본 소재가 된다 → 이는 <b>반도체<\/b>의 정의 그대로다. 액정·그래핀·초전도체·탄소 나노 튜브는 모두 다른 신소재이므로 정답은 ③ 반도체.", "image": "images/2024학년도_6월_4번.png"}, {"id": "e2021_11_12", "difficulty": "easy", "topic": "반도체와 규소", "source": "2021년 11월 학평 12번", "answer": 4, "choices": ["A: 그래핀 / ㉠: 탄소", "A: 그래핀 / ㉠: 규소", "A: 반도체 / ㉠: 탄소", "A: 반도체 / ㉠: 규소", "A: 초전도체 / ㉠: 탄소"], "explanation": "A는 <b>도체와 절연체의 중간<\/b> 성질을 가지므로 <b>반도체<\/b>. 지각을 구성하는 원소 중 산소 다음으로 풍부한 원소는 <b>규소(Si)<\/b>이고, 규소는 반도체 소자의 원료로 쓰인다. 따라서 A=반도체, ㉠=규소인 ④가 정답.", "image": "images/2021학년도_11월_12번.png"}, {"id": "m2025_09_12", "difficulty": "medium", "topic": "도체·반도체·부도체 구분", "source": "2025년 9월 학평 12번", "answer": 4, "choices": ["ㄱ", "ㄴ", "ㄱ, ㄷ", "ㄴ, ㄷ", "ㄱ, ㄴ, ㄷ"], "explanation": "㉠은 <b>도체<\/b> 칸(철·은과 함께)에 있으므로 <b>구리<\/b>, ㉡은 <b>부도체<\/b> 칸(유리와 함께)에 있으므로 <b>고무<\/b>. <b>ㄱ<\/b>: ㉠은 구리이므로 고무가 아님 → 틀림. <b>ㄴ<\/b>: 도체인 구리(㉠)가 부도체인 고무(㉡)보다 전류가 잘 흐름 → 맞음. <b>ㄷ<\/b>: 반도체(저마늄)에 불순물을 첨가(도핑)하면 전기적 성질을 바꿀 수 있음 → 맞음. 정답은 ④ ㄴ, ㄷ.", "image": "images/2025학년도_9월_12번.png"}, {"id": "m2025_06_19", "difficulty": "medium", "topic": "전기적 성질 활용 · 태양 전지판", "source": "2025년 6월 학평 19번", "answer": 1, "choices": ["ㄱ", "ㄴ", "ㄱ, ㄷ", "ㄴ, ㄷ", "ㄱ, ㄴ, ㄷ"], "explanation": "㉠ 태양 전지=<b>반도체<\/b>, ㉡ 구리 도선=<b>도체<\/b>, ㉢ 전선 피복=<b>부도체<\/b>. <b>ㄱ<\/b>: 태양 전지는 반도체로 제작됨 → 맞음. <b>ㄴ<\/b>: 구리 도선(도체)은 전기 저항이 가장 작고 태양 전지(반도체)는 그보다 저항이 큼 → '㉡이 ㉠보다 저항이 크다'는 설명은 틀림. <b>ㄷ<\/b>: 부도체(전선 피복)는 자유 전자가 거의 없어 도체(구리 도선)보다 자유 전자가 적음 → 틀림. 정답은 ① ㄱ.", "image": "images/2025학년도_6월_19번.png"}]</script>
 
-<script type="text/babel" data-type="module">
+<script type="text/babel" data-presets="classic-react">
 const { useState, useEffect, useRef, useLayoutEffect } = React;
 
 // Load problems from embedded JSON
